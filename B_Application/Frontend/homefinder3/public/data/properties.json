@@ -1,0 +1,107 @@
+[
+  {
+    "id": "1",
+    "title": "Riad Saʿāda Sea View",
+    "type": "rent",
+    "price": 1200,
+    "currency": "MAD",
+    "description": "Beautiful traditional riad with stunning sea views in the heart of Essaouira's medina. Perfect for couples or small families looking for an authentic Moroccan experience.",
+    "location": {
+      "city": "Essaouira",
+      "neighborhood": "Medina",
+      "address": "Rue de la Skala, Essaouira 44000",
+      "coordinates": { "lat": 31.5125, "lng": -9.7749 }
+    },
+    "tags": ["sea view", "pool", "pet-friendly", "wifi", "traditional"],
+    "media": [
+      { "type": "photo", "url": "/placeholder.svg?height=400&width=600&text=Riad+Exterior" },
+      { "type": "photo", "url": "/placeholder.svg?height=400&width=600&text=Sea+View" },
+      { "type": "photo", "url": "/placeholder.svg?height=400&width=600&text=Pool+Area" },
+      { "type": "icon", "name": "wifi" },
+      { "type": "icon", "name": "waves" },
+      { "type": "icon", "name": "heart" },
+      { "type": "video", "url": "https://youtu.be/exampleTour1" }
+    ],
+    "stages": [
+      { "name": "Ground Floor", "rooms": ["Living Room", "Kitchen", "Dining Area"] },
+      { "name": "First Floor", "rooms": ["Master Bedroom", "Bathroom", "Terrace"] },
+      { "name": "Rooftop", "rooms": ["Pool Area", "Lounge"] }
+    ],
+    "contacts": [{ "name": "Host Amina", "phone": "+212600123456", "email": "amina@homefinder.ma" }],
+    "amenities": ["Pool", "WiFi", "Sea View", "Pet Friendly", "Traditional Architecture"],
+    "bedrooms": 2,
+    "bathrooms": 2,
+    "area": 120,
+    "available": true
+  },
+  {
+    "id": "2",
+    "title": "Complex Mojama3 Downtown",
+    "type": "sale",
+    "price": 2500000,
+    "currency": "MAD",
+    "description": "Modern residential complex in the heart of Casablanca's Anfa district. Features luxury amenities and contemporary design with easy access to business district.",
+    "location": {
+      "city": "Casablanca",
+      "neighborhood": "Anfa",
+      "address": "Boulevard d'Anfa, Casablanca 20000",
+      "coordinates": { "lat": 33.5731, "lng": -7.5898 }
+    },
+    "tags": ["gym", "parking", "garden", "modern", "luxury"],
+    "media": [
+      { "type": "photo", "url": "/placeholder.svg?height=400&width=600&text=Complex+Exterior" },
+      { "type": "photo", "url": "/placeholder.svg?height=400&width=600&text=Gym+Facility" },
+      { "type": "photo", "url": "/placeholder.svg?height=400&width=600&text=Garden+Area" },
+      { "type": "icon", "name": "car" },
+      { "type": "icon", "name": "dumbbell" },
+      { "type": "icon", "name": "trees" },
+      { "type": "video", "url": "https://youtu.be/exampleTour2" }
+    ],
+    "stages": [
+      { "name": "Unit A - 3rd Floor", "rooms": ["3 Bedrooms", "2 Bathrooms", "Living Room", "Kitchen"] },
+      { "name": "Unit B - 5th Floor", "rooms": ["2 Bedrooms", "1 Bathroom", "Open Plan Living"] },
+      { "name": "Shared Facilities", "rooms": ["Gym", "Garden", "Parking Garage"] }
+    ],
+    "contacts": [{ "name": "Host Karim", "phone": "+212600654321", "email": "karim@homefinder.ma" }],
+    "amenities": ["Gym", "Parking", "Garden", "Security", "Modern Design"],
+    "bedrooms": 3,
+    "bathrooms": 2,
+    "area": 180,
+    "available": true
+  },
+  {
+    "id": "3",
+    "title": "Sa3ada Hillside Retreat",
+    "type": "rent",
+    "price": 800,
+    "currency": "MAD",
+    "description": "Peaceful hillside retreat in Marrakech's Palmeraie district. Surrounded by palm trees with mountain views, perfect for relaxation and tranquility.",
+    "location": {
+      "city": "Marrakech",
+      "neighborhood": "Palmeraie",
+      "address": "Circuit de la Palmeraie, Marrakech 40000",
+      "coordinates": { "lat": 31.6295, "lng": -8.0076 }
+    },
+    "tags": ["mountain view", "garden", "wifi", "peaceful", "nature"],
+    "media": [
+      { "type": "photo", "url": "/placeholder.svg?height=400&width=600&text=Hillside+View" },
+      { "type": "photo", "url": "/placeholder.svg?height=400&width=600&text=Garden+Retreat" },
+      { "type": "photo", "url": "/placeholder.svg?height=400&width=600&text=Mountain+View" },
+      { "type": "icon", "name": "mountain" },
+      { "type": "icon", "name": "leaf" },
+      { "type": "icon", "name": "wifi" },
+      { "type": "video", "url": "https://youtu.be/exampleTour3" }
+    ],
+    "stages": [
+      { "name": "Main House", "rooms": ["Living Room", "Kitchen", "Master Bedroom"] },
+      { "name": "Guest Annex", "rooms": ["2 Guest Bedrooms", "1 Bathroom"] },
+      { "name": "Outdoor Areas", "rooms": ["Garden", "Terrace", "Pool Area"] }
+    ],
+    "contacts": [{ "name": "Host Leila", "phone": "+212600789012", "email": "leila@homefinder.ma" }],
+    "amenities": ["Mountain View", "Garden", "WiFi", "Pool", "Peaceful Location"],
+    "bedrooms": 3,
+    "bathrooms": 2,
+    "area": 150,
+    "available": true
+  }
+]
