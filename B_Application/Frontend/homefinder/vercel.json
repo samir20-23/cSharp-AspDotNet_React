@@ -1,0 +1,12 @@
+{
+  "builds": [
+    {
+      "src": "B_Application/Frontend/homefinder/package.json",
+      "use": "@vercel/static-build",
+      "config": { "distDir": "build" }
+    }
+  ],
+  "routes": [
+    { "src": "/(.*)", "dest": "/index.html" }
+  ]
+}
