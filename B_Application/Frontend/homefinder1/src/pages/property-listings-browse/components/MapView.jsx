@@ -1,36 +1,50 @@
-import React, { useState } from 'react';
-import Icon from '../../../components/AppIcon';
-import Button from '../../../components/ui/Button';
+import React, { useState } from "react";
+import Icon from "../../../components/AppIcon";
+import Button from "../../../components/ui/Button";
 
 const MapView = ({ properties, onPropertySelect, selectedProperty }) => {
   const [mapLoaded, setMapLoaded] = useState(false);
 
   // Mock coordinates for Moroccan cities
   const cityCoordinates = {
-    'Marrakech': { lat: 31.6295, lng: -7.9811 },
-    'Casablanca': { lat: 33.5731, lng: -7.5898 },
-    'Rabat': { lat: 34.0209, lng: -6.8416 },
-    'Fez': { lat: 34.0181, lng: -5.0078 },
-    'Tangier': { lat: 35.7595, lng: -5.8340 },
-    'Essaouira': { lat: 31.5085, lng: -9.7595 }
+    Casablanca: { lat: 33.5731, lng: -7.5898 },
+    Rabat: { lat: 34.0209, lng: -6.8416 },
+    Marrakech: { lat: 31.6295, lng: -7.9811 },
+    Fez: { lat: 34.0181, lng: -5.0078 },
+    Tangier: { lat: 35.7595, lng: -5.834 },
+    Agadir: { lat: 30.4278, lng: -9.5981 },
+    Meknes: { lat: 33.8974, lng: -5.5474 },
+    Oujda: { lat: 34.6833, lng: -1.9086 },
+    Kenitra: { lat: 34.261, lng: -6.58 },
+    Tetouan: { lat: 35.5713, lng: -5.368 },
+    Safi: { lat: 32.2998, lng: -9.2332 },
+    "El Jadida": { lat: 33.2479, lng: -8.4967 },
+    Ouarzazate: { lat: 30.918, lng: -6.9066 },
+    Chefchaouen: { lat: 35.1686, lng: -5.2698 },
+    Nador: { lat: 35.168, lng: -2.9336 },
+    Dakhla: { lat: 23.684, lng: -15.957 },
+    Laayoune: { lat: 27.1288, lng: -13.2023 },
+    Settat: { lat: 33.0015, lng: -7.619 },
+    "Beni Mellal": { lat: 32.337, lng: -6.363 },
+    Khouribga: { lat: 32.8826, lng: -6.9054 },
   };
-
   const getPropertyCoordinates = (property) => {
-    const cityCoords = cityCoordinates[property.city] || cityCoordinates['Marrakech'];
+    const cityCoords =
+      cityCoordinates[property.city] || cityCoordinates["Marrakech"];
     // Add small random offset for properties in same city
     return {
       lat: cityCoords.lat + (Math.random() - 0.5) * 0.02,
-      lng: cityCoords.lng + (Math.random() - 0.5) * 0.02
+      lng: cityCoords.lng + (Math.random() - 0.5) * 0.02,
     };
   };
 
   const formatPrice = (price) => {
-    return new Intl.NumberFormat('fr-MA', {
-      style: 'currency',
-      currency: 'MAD',
+    return new Intl.NumberFormat("fr-MA", {
+      style: "currency",
+      currency: "MAD",
       minimumFractionDigits: 0,
       maximumFractionDigits: 0,
-      notation: 'compact'
+      notation: "compact",
     }).format(price);
   };
 
@@ -52,11 +66,15 @@ const MapView = ({ properties, onPropertySelect, selectedProperty }) => {
           onLoad={() => setMapLoaded(true)}
           className="border-0"
         />
-        
+
         {!mapLoaded && (
           <div className="absolute inset-0 bg-muted flex items-center justify-center">
             <div className="text-center">
-              <Icon name="Map" size={48} className="text-text-secondary mx-auto mb-2" />
+              <Icon
+                name="Map"
+                size={48}
+                className="text-text-secondary mx-auto mb-2"
+              />
               <p className="text-text-secondary">Loading map...</p>
             </div>
           </div>
@@ -70,20 +88,22 @@ const MapView = ({ properties, onPropertySelect, selectedProperty }) => {
           // Convert coordinates to approximate pixel positions (simplified)
           const x = ((coords.lng + 12) / 12) * 100; // Rough conversion for Morocco bounds
           const y = ((35 - coords.lat) / 8) * 100;
-          
+
           return (
             <div
               key={property.id}
               className="absolute pointer-events-auto transform -translate-x-1/2 -translate-y-1/2"
-              style={{ 
-                left: `${Math.max(5, Math.min(95, x))}%`, 
-                top: `${Math.max(5, Math.min(95, y))}%` 
+              style={{
+                left: `${Math.max(5, Math.min(95, x))}%`,
+                top: `${Math.max(5, Math.min(95, y))}%`,
               }}
             >
               <button
                 onClick={() => onPropertySelect(property)}
                 className={`relative bg-primary text-primary-foreground px-2 py-1 rounded-lg text-xs font-medium shadow-warm hover:shadow-warm-md transition-all duration-200 hover:scale-110 ${
-                  selectedProperty?.id === property.id ? 'ring-2 ring-accent scale-110' : ''
+                  selectedProperty?.id === property.id
+                    ? "ring-2 ring-accent scale-110"
+                    : ""
                 }`}
               >
                 {formatPrice(property.price)}
@@ -98,7 +118,12 @@ const MapView = ({ properties, onPropertySelect, selectedProperty }) => {
       <div className="absolute top-4 right-4 flex flex-col space-y-2">
         <Button
           variant="secondary"
-          onClick={() => window.open(`https://www.google.com/maps?q=${mapCenter.lat},${mapCenter.lng}&z=6`, '_blank')}
+          onClick={() =>
+            window.open(
+              `https://www.google.com/maps?q=${mapCenter.lat},${mapCenter.lng}&z=6`,
+              "_blank"
+            )
+          }
           iconName="ExternalLink"
           iconSize={16}
           className="shadow-warm"
@@ -114,7 +139,7 @@ const MapView = ({ properties, onPropertySelect, selectedProperty }) => {
               alt={selectedProperty.title}
               className="w-16 h-16 object-cover rounded-lg flex-shrink-0"
               onError={(e) => {
-                e.target.src = '/assets/images/no_image.png';
+                e.target.src = "/assets/images/no_image.png";
               }}
             />
             <div className="flex-1 min-w-0">
@@ -126,8 +151,10 @@ const MapView = ({ properties, onPropertySelect, selectedProperty }) => {
               </p>
               <p className="text-primary font-semibold text-sm">
                 {formatPrice(selectedProperty.price)}
-                {selectedProperty.status === 'for-rent' && (
-                  <span className="text-xs font-normal text-text-secondary">/month</span>
+                {selectedProperty.status === "for-rent" && (
+                  <span className="text-xs font-normal text-text-secondary">
+                    /month
+                  </span>
                 )}
               </p>
             </div>
@@ -144,7 +171,8 @@ const MapView = ({ properties, onPropertySelect, selectedProperty }) => {
       {/* Properties Count */}
       <div className="absolute top-4 left-4 bg-background/90 backdrop-blur-sm border border-border rounded-lg px-3 py-2">
         <span className="text-sm font-medium text-text-primary">
-          {properties.length} {properties.length === 1 ? 'Property' : 'Properties'}
+          {properties.length}{" "}
+          {properties.length === 1 ? "Property" : "Properties"}
         </span>
       </div>
     </div>
