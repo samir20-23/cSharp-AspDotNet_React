@@ -13,8 +13,7 @@ class ErrorBoundary extends React.Component {
 
   componentDidCatch(error, errorInfo) {
     error.__ErrorBoundary = true;
-    window.__COMPONENT_ERROR__?.(error, errorInfo);
-    // console.log("Error caught by ErrorBoundary:", error, errorInfo);
+    window.__COMPONENT_ERROR__?.(error, errorInfo); 
   }
 
   render() {

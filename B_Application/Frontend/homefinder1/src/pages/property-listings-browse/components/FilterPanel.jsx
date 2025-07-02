@@ -26,18 +26,35 @@ const FilterPanel = ({
     { id: 'traditional', label: 'Traditional House', icon: 'Castle' }
   ];
 
-  const cities = [
-    'Marrakech', 'Casablanca', 'Rabat', 'Fez', 'Tangier', 'Essaouira', 'Agadir', 'Meknes'
-  ];
+const cities = [
+  'Casablanca','Rabat','Marrakech','Fez','Tangier',
+  'Agadir','Meknes','Oujda','Kenitra','Tetouan',
+  'Safi','El Jadida','Ouarzazate','Chefchaouen','Nador',
+  'Dakhla','Laayoune','Settat','Beni Mellal','Khouribga'
+]
 
-  const neighborhoods = {
-    'Marrakech': ['Medina', 'Gueliz', 'Palmeraie', 'Hivernage'],
-    'Casablanca': ['Anfa', 'Maarif', 'Racine', 'Bourgogne'],
-    'Rabat': ['Agdal', 'Hassan', 'Souissi', 'Hay Riad'],
-    'Fez': ['Medina', 'Ville Nouvelle', 'Atlas', 'Saiss'],
-    'Tangier': ['Medina', 'Malabata', 'Boubana', 'California'],
-    'Essaouira': ['Medina', 'Diabat', 'Ghazoua', 'Ounagha']
-  };
+ const neighborhoods = {
+  'Casablanca':   ['Anfa','Maarif','Racine','Bourgogne'],
+  'Rabat':        ['Agdal','Hassan','Souissi','Hay Riad'],
+  'Marrakech':    ['Medina','Gueliz','Palmeraie','Hivernage'],
+  'Fez':          ['Medina','Ville Nouvelle','Atlas','Saiss'],
+  'Tangier':      ['Medina','Malabata','Boubana','California'],
+  'Agadir':       ['Agadir Plage','Talborjt','Anza','Founty'],
+  'Meknes':       ['Kasbah','Hivernage','Derb Touil','Oued el‑Jawahir'],
+  'Oujda':        ['Sidi Yahya','Berkane','Oulad Said','Sidi Messaoud'],
+  'Kenitra':      ['Médina','Ain Sbit','Al Mansour','Les Fleurs'],
+  'Tetouan':      ['Medina','Martil','Zinat','Malabata'],
+  'Safi':         ['Ville','Hamria','Bouskoura','Le Jaouhara'],
+  'El Jadida':    ['Azemmour','Mahdiyya','Cap','Sook Al Khemis'],
+  'Ouarzazate':   ['Aouzal','Tifoultoute','Tagherat','Skoura'],
+  'Chefchaouen':  ['Medina','Borj','Outa el Hammam','El Makhzen'],
+  'Nador':        ['Beni Ensar','Ras el‑Ma','Segangan','Zarhoun'],
+  'Dakhla':       ['La Source','Naila','Boulevard Mohamed','Golf'],
+  'Laayoune':     ['Hay Adil','Boulevard 20 Août','Hay al‑Wafaa','Malkiya'],
+  'Settat':       ['Ville Nouvelle','Cité Oulad Hriz','El Mansour','Espace Vert'],
+  'Beni Mellal':  ['Kasbat Tadla','Cité El Alia','Aguelmous','Ain Asserdoun'],
+  'Khouribga':    ['Cité OCP','Sidi Rahal','La Médina','Cité des Hôpitaux'],
+}
 
   const amenities = [
     'WiFi', 'Pool', 'Garden', 'Parking', 'Air Conditioning', 'Heating',

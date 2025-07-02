@@ -1,8 +1,8 @@
 import React from "react";
 import { BrowserRouter, Routes as RouterRoutes, Route } from "react-router-dom";
 import ScrollToTop from "components/ScrollToTop";
-import ErrorBoundary from "components/ErrorBoundary";
-// Add your imports here
+import ErrorBoundary from "components/ErrorBoundary"; 
+
 import PropertyListingsBrowse from "pages/property-listings-browse";
 import PropertyDetailView from "pages/property-detail-view";
 import HostDashboard from "pages/host-dashboard";

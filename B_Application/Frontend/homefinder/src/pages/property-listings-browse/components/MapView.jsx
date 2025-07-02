@@ -6,14 +6,28 @@ const MapView = ({ properties, onPropertySelect, selectedProperty }) => {
   const [mapLoaded, setMapLoaded] = useState(false);
 
   // Mock coordinates for Moroccan cities
-  const cityCoordinates = {
-    'Marrakech': { lat: 31.6295, lng: -7.9811 },
-    'Casablanca': { lat: 33.5731, lng: -7.5898 },
-    'Rabat': { lat: 34.0209, lng: -6.8416 },
-    'Fez': { lat: 34.0181, lng: -5.0078 },
-    'Tangier': { lat: 35.7595, lng: -5.8340 },
-    'Essaouira': { lat: 31.5085, lng: -9.7595 }
-  };
+const cityCoordinates = {
+  'Casablanca':   { lat: 33.5731,  lng: -7.5898 },
+  'Rabat':        { lat: 34.0209,  lng: -6.8416 },
+  'Marrakech':    { lat: 31.6295,  lng: -7.9811 },
+  'Fez':          { lat: 34.0181,  lng: -5.0078 },
+  'Tangier':      { lat: 35.7595,  lng: -5.8340 },
+  'Agadir':       { lat: 30.4278,  lng: -9.5981 },
+  'Meknes':       { lat: 33.8974,  lng: -5.5474 },
+  'Oujda':        { lat: 34.6833,  lng: -1.9086 },
+  'Kenitra':      { lat: 34.2610,  lng: -6.5800 },
+  'Tetouan':      { lat: 35.5713,  lng: -5.3680 },
+  'Safi':         { lat: 32.2998,  lng: -9.2332 },
+  'El Jadida':    { lat: 33.2479,  lng: -8.4967 },
+  'Ouarzazate':   { lat: 30.9180,  lng: -6.9066 },
+  'Chefchaouen':  { lat: 35.1686,  lng: -5.2698 },
+  'Nador':        { lat: 35.1680,  lng: -2.9336 },
+  'Dakhla':       { lat: 23.6840,  lng:-15.9570 },
+  'Laayoune':     { lat: 27.1288,  lng:-13.2023 },
+  'Settat':       { lat: 33.0015,  lng: -7.6190 },
+  'Beni Mellal':  { lat: 32.3370,  lng: -6.3630 },
+  'Khouribga':    { lat: 32.8826,  lng: -6.9054 },
+}
 
   const getPropertyCoordinates = (property) => {
     const cityCoords = cityCoordinates[property.city] || cityCoordinates['Marrakech'];
