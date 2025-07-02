@@ -34,8 +34,7 @@ const BreadcrumbNavigation = () => {
   };
 
   const breadcrumbs = getBreadcrumbs();
-
-  // Don't show breadcrumbs if we're on the home page or if there's only one item
+ 
   if (breadcrumbs.length <= 1) {
     return null;
   }
