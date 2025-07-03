@@ -30,6 +30,7 @@
   "scripts": {
     "start": "vite",
     "build": "vite build --sourcemap",
+    "vercel-build": "vite build",
     "serve": "vite preview"
   },
   "eslintConfig": {
