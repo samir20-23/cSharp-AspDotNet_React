@@ -1,0 +1,32 @@
+{
+  "version": 2,
+
+  // 1️⃣ Tell Vercel where your frontend lives
+  "projects": [
+    {
+      "rootDirectory": "B_Application/Frontend/homefinder"
+    }
+  ],
+
+  // 2️⃣ Build settings for your Vite app
+  "builds": [
+    {
+      // Point at the package.json inside your homefinder folder
+      "src": "B_Application/Frontend/homefinder/package.json",
+      "use": "@vercel/static-build",
+      // Your vite.config.mjs outputs into "build"
+      "config": {
+        "distDir": "build"
+      }
+    }
+  ],
+
+  // 3️⃣ Rewrite every URL to index.html (so React Router can handle it)
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/index.html",
+      "continue": true
+    }
+  ]
+}
