@@ -10,7 +10,7 @@ export default defineConfig({
   build: {
     // Output directory for production build.
     // Change this to "dist" so Vercel can find it by default.
-    outDir: "dist",
+  outDir: "build",
 
     // Increase the warning limit if you have large bundles.
     chunkSizeWarningLimit: 2000
