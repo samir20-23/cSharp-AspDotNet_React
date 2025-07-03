@@ -1,7 +1,7 @@
 {
   "builds": [
     {
-      "src": "B_Application/Frontend/homefinder/vite.config.mjs",
+      "src": "B_Application/Frontend/homefinder/package.json",
       "use": "@vercel/static-build",
       "config": {
         "distDir": "B_Application/Frontend/homefinder/build"
@@ -15,4 +15,3 @@
     }
   ]
 }
- 
